@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+  /* Navbar */
+  .desktop-nav {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
+  /* Hero */
+  .hero-heading {
+    font-size: 2.5rem !important;
+  }
+  /* WhyUs and Contact */
+  .two-col-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

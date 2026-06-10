@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lato:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #D4A574;
+  --primary-dark: #C19660;
+  --cream: #F5F0E8;
+  --cream-light: #FBF9F6;
+  --dark: #1A1A1A;
+  --gray: #666666;
+  --light-gray: #999999;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+/* Image fade-in */
+img.loaded {
+  opacity: 1 !important;
+}
+
+/* Product card image zoom */
+.product-card:hover .card-image img {
+  transform: scale(1.08);
+}
+
+/* Gallery styles */
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  /* Hero container */
+  .App > section:nth-child(2) > div {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  /* Hero heading */
+  .hero-heading {
+    font-size: 2.5rem !important;
+  }
+
+  /* WhyUs container */
+  .two-col-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Gallery grid */
+  .gallery-grid {
+    columns: 2 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .desktop-nav {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
+
+  /* Gallery grid */
+  .gallery-grid {
+    columns: 1 !important;
+  }
+}
